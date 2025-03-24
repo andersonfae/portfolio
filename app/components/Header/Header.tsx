@@ -6,9 +6,8 @@ export function Header() {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <header className="bg-neutral-900">
-      {/* Container com 30px de padding no topo e nas laterais */}
-      <div className="flex items-center py-[30px] px-[30px] text-white font-sans pt-10">
+    <header className="bg-neutral-900 w-full">
+      <div className="flex items-center py-[30px] px-[15px] text-white font-sans pt-10 w-full">
         {/* Texto: Based in Ireland */}
         <div className="flex items-center gap-2 text-[14px]">
           <MapPin size={14} weight="duotone" />
@@ -19,15 +18,17 @@ export function Header() {
         </div>
 
         {/* Linha divisória */}
-        <div className="flex-1 h-px bg-white mx-[20px] mr-[220px]" />
+        {/* flex-1 faz a linha ocupar todo o espaço restante,
+           mx-[10px] cria espaço lateral entre o texto e o botão.
+           Em desktop, mantemos mr-[220px] adicional para o layout. */}
+        <div className="flex-1 h-px bg-white mx-[10px] md:mr-[220px]" />
 
-        {/* Link para abrir email */}
+        {/* Botão "Available for work" */}
         <a
           href="mailto:andersonfae.owl@gmail.com"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
           className={`
-            fixed right-[30px] top-[30px]
             flex items-center justify-center gap-2
             w-[200px] h-[40px]
             rounded-full
@@ -35,6 +36,9 @@ export function Header() {
             transition-colors duration-300
             border
             z-10
+            bg-neutral-900
+            relative
+            md:fixed md:right-[30px] md:top-[30px]
             ${
               isHovering
                 ? "border-white/20 bg-[#2CDF411A]"
