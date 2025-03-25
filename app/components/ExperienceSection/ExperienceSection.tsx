@@ -30,7 +30,7 @@ export function ExperienceSection() {
     },
     {
       logo: "/freela.png",
-      role: "Full Stack Developer Freelancer",
+      role: "Full-Stack Developer",
       company: "Freelance",
       dateRange: "Dec 2019 - Present · 5 yrs 4 mos",
       responsibilities: [
@@ -52,7 +52,7 @@ export function ExperienceSection() {
     },
     {
       logo: "/lxp.png",
-      role: "Frontend Developer",
+      role: "Front-end Developer",
       company: "LXP EAD",
       dateRange: "Sep 2024 - Dec 2024 · 4 mos",
       responsibilities: [
@@ -71,7 +71,7 @@ export function ExperienceSection() {
     },
     {
       logo: "/declare.png",
-      role: "Full Stack Developer",
+      role: "Full-Stack Developer",
       company: "Declare Cripto",
       dateRange: "Jan 2024 - Sep 2024 · 9 mos",
       responsibilities: [
@@ -90,7 +90,7 @@ export function ExperienceSection() {
     },
     {
       logo: "/jotaja.png",
-      role: "Full Stack Developer",
+      role: "Full-Stack Developer",
       company: "Jotaja Pedidos",
       dateRange: "Dec 2022 - Jun 2023 · 7 mos",
       responsibilities: [
@@ -109,7 +109,7 @@ export function ExperienceSection() {
     },
     {
       logo: "/7consulting.png",
-      role: "Full Stack Developer",
+      role: "Full-Stack Developer",
       company: "7Consulting",
       dateRange: "Dec 2022 - Feb 2023 · 3 mos",
       responsibilities: [

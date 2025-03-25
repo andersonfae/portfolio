@@ -14,42 +14,37 @@ export function Footer() {
       "
     >
       {/* Linha superior: texto à esquerda + texto à direita */}
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col md:flex-row justify-between items-start">
         {/* Texto esquerdo */}
-        <p className="w-1/2 text-[14px] font-bold">
-          Anderson Faé – Full-Stack Developer.
-          {/* Parte com opacidade 60% */}
-          <span className="font-normal text-white/60">
+        <div className="w-full md:w-1/2 text-[14px] mb-[30px] md:mb-0">
+          <p className="font-bold md:inline">
+            Anderson Faé – Full-Stack Developer.
+          </p>
+          <p className="text-white/60 md:inline">
             {" "}
             Made with{" "}
-            <span>
-              <Heart
-                size={16}
-                color="#fff"
-                weight="fill"
-                className="inline-block align-text-bottom"
-              />
-            </span>{" "}
+            <Heart
+              size={16}
+              color="#fff"
+              weight="fill"
+              className="inline-block align-text-bottom"
+            />{" "}
             in Dublin & Rio de Janeiro.
-          </span>
-        </p>
+          </p>
+        </div>
 
         {/* Texto direito */}
-        <p className="w-1/2 text-right text-[14px]">
-          {/* Sem opacidade */}
-          <span>No Privacy Policy. No Terms of Use. </span>
-          {/* 60% de opacidade */}
+        <div className="w-full md:w-1/2 text-left md:text-right text-[14px] flex flex-col md:block">
+          <span>No Privacy Policy. No Terms of Use.</span>
           <span className="text-white/60">
             It&apos;s just a personal website.
           </span>
-        </p>
+        </div>
       </div>
 
       {/* 90px de distância até a linha inferior */}
       <p className="mt-[90px] text-[14px]">
-        {/* "Designed by" em 60% de opacidade */}
         <span className="text-white/60">Designed by </span>
-        {/* "Cosme Faé" sem opacidade, borda branca embaixo, link para LinkedIn */}
         <a
           href="https://hellofae.com/"
           target="_blank"
