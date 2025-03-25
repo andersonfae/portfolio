@@ -21,45 +21,86 @@ export function TechnicalNavbar() {
   };
 
   return (
-    <nav
-      className="
-        w-64 mr-8
-        sticky top-[30px]
-        self-start
-        hidden lg:block
-        pt-[30px]
-      "
-    >
-      {/* Espaçamento vertical de 10px entre os links */}
-      <ul className="space-y-[10px]">
-        {navItems.map((item) => {
-          const isActive = activeItem === item.href;
-          return (
-            <li key={item.label}>
+    <>
+      {/* DESKTOP NAVBAR (sticky on the left) */}
+      <nav
+        className="
+          w-64 mr-8
+          sticky top-[30px]
+          self-start
+          hidden lg:block
+          pt-[30px]
+        "
+      >
+        <ul className="space-y-[10px]">
+          {navItems.map((item) => {
+            const isActive = activeItem === item.href;
+            return (
+              <li key={item.label}>
+                <button
+                  onClick={() => handleClick(item.href)}
+                  className={`
+                    inline-block
+                    cursor-pointer
+                    text-sm font-medium
+                    leading-none
+                    border-b border-white
+                    hover:underline
+                    pb-[2px]
+                    ${isActive ? "line-through opacity-40" : ""}
+                    text-white
+                  `}
+                >
+                  {item.label}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+
+      {/* MOBILE NAVBAR (fixed at the bottom) */}
+      <nav
+        className="
+          fixed
+          bottom-0
+          left-0
+          w-full
+          h-[60px]
+          bg-neutral-900
+          text-white
+          border-t border-white
+          z-50
+          lg:hidden
+          overflow-x-auto
+          hide-scrollbar
+        "
+      >
+        <div className="flex items-center px-[15px] h-full whitespace-nowrap">
+          {navItems.map((item) => {
+            const isActive = activeItem === item.href;
+            return (
               <button
+                key={item.label}
                 onClick={() => handleClick(item.href)}
                 className={`
-                  inline-block           /* Para a borda ter o mesmo tamanho do texto */
-                  cursor-pointer
-                  text-sm font-medium
-                  leading-none          /* Diminui a altura da linha, aproximando o texto da borda */
-                  border-b border-white /* Borda embaixo do texto */
+                  text-[12px] font-medium
+                  leading-none
                   hover:underline
-                  pb-[2px]             /* Pequeno espaço entre o texto e a borda */
-                  ${
-                    isActive
-                      ? "line-through opacity-40" /* Ao clicar: risco + opacidade 40% */
-                      : ""
-                  }
-                  text-white
+                  px-4
+                  ${isActive ? "line-through opacity-40" : ""}
                 `}
               >
                 {item.label}
               </button>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+            );
+          })}
+        </div>
+
+        {/* Sombras nas laterais para indicar scroll */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-neutral-900 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-neutral-900 to-transparent" />
+      </nav>
+    </>
   );
 }

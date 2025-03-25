@@ -36,7 +36,6 @@ export function Header() {
             transition-colors duration-300
             border
             z-10
-            bg-neutral-900
             relative
             md:fixed md:right-[30px] md:top-[30px]
             ${

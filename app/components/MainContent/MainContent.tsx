@@ -9,7 +9,7 @@ import { HireMeSection } from "../HireMeSection/HireMeSection";
 
 export function MainContent() {
   return (
-    <section className="bg-neutral-900 text-white min-h-screen px-[30px] py-[60px]">
+    <section className="bg-neutral-900 text-white min-h-screen md:px-[30px] py-[60px]">
       <div className="flex">
         <TechnicalNavbar />
 

@@ -57,7 +57,7 @@ export function RecentWorksSection() {
   return (
     <section
       id="recent-works"
-      className="bg-neutral-900 text-white px-[30px] py-[60px]"
+      className="bg-neutral-900 text-white px-[15px] md:px-[30px]"
     >
       {/* Título geral */}
       <div className="flex items-center gap-2 mb-8">
@@ -79,12 +79,20 @@ export function RecentWorksSection() {
           >
             {/* Coluna Esquerda: imagem + texto */}
             <div className="flex-1">
-              <div className="flex gap-4">
+              <div className="flex flex-col lg:flex-row gap-4">
                 {/* Imagem à esquerda */}
                 <img
                   src={work.image}
                   alt={work.title}
-                  className="w-[249px] h-[186px] object-cover flex-none"
+                  className="
+                    w-full
+                    max-w-[295px]
+                    h-[180px]
+                    lg:w-[249px]
+                    lg:h-[186px]
+                    object-cover
+                    flex-none
+                  "
                 />
 
                 {/* Texto ao lado da imagem */}
@@ -119,8 +127,45 @@ export function RecentWorksSection() {
               </div>
             </div>
 
-            {/* Coluna Direita: sub-cards em grid (2 colunas), cada um com padding de 15px */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Mobile: Carrossel de cards */}
+            {/* <div className="lg:hidden w-full overflow-x-auto">
+              <div
+                className="
+                  flex
+                  gap-4
+                  px-[15px]
+                  pb-4
+                  w-max
+                  max-w-full
+                  overflow-x-scroll
+                  scrollbar-hide
+                "
+              >
+                {work.details.map((detail, i) => (
+                  <div
+                    key={i}
+                    className="
+                      flex-shrink-0
+                      bg-[#FFFFFF1A]
+                      p-[15px]
+                      rounded
+                      text-[14px]
+                      text-gray-200
+                      leading-normal
+                      w-[212px]
+                      min-h-[162px]
+                      max-h-[162px]
+                      overflow-auto
+                    "
+                  >
+                    {detail}
+                  </div>
+                ))}
+              </div>
+            </div> */}
+
+            {/* Desktop: Grid de cards em 2 colunas */}
+            <div className="hidden lg:grid grid-cols-2 gap-4">
               {work.details.map((detail, i) => (
                 <div
                   key={i}

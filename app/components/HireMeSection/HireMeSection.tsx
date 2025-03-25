@@ -11,11 +11,15 @@ export function HireMeSection() {
   return (
     <section
       id="hire-me"
-      className="bg-neutral-900 text-white px-[30px] py-[60px] relative"
+      className="bg-neutral-900 text-white px-[15px] py-[60px] relative"
     >
       {/* Back to Top (posicionado absolutamente) */}
       <a
         href="#top"
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
         className="
           absolute
           -left-[270px]
@@ -46,9 +50,9 @@ export function HireMeSection() {
         <div className="h-[30px]" />
 
         {/* Faixa com fundo #FFFFFF1A, 60px top e bottom, ocupando toda a largura */}
-        <div className="bg-[#FFFFFF1A] w-full py-[60px] flex items-center justify-center rounded">
+        <div className="bg-[#FFFFFF1A] w-full py-[60px] flex flex-col md:flex-row items-center justify-center rounded gap-4">
           {/* Container dos links, com espaçamento entre si */}
-          <div className="flex gap-4 flex-wrap justify-center">
+          <div className="flex flex-col md:flex-row gap-4 flex-wrap justify-center">
             {/* E-mail */}
             <a
               href="mailto:andersonfae.owl@gmail.com"
@@ -68,7 +72,7 @@ export function HireMeSection() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/seu-perfil"
+              href="https://linkedin.com/in/andersonfae"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -87,7 +91,7 @@ export function HireMeSection() {
 
             {/* GitHub */}
             <a
-              href="https://github.com/seu-usuario"
+              href="https://github.com/andersonfae"
               target="_blank"
               rel="noopener noreferrer"
               className="

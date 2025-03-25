@@ -147,10 +147,7 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section
-      id="experience"
-      className="bg-neutral-900 text-white px-[30px] py-[60px]"
-    >
+    <section id="experience" className="bg-neutral-900 text-white px-[15px]">
       {/* Título com ícone */}
       <div className="flex items-center gap-2 mb-[30px]">
         <Globe size={16} color="#E9CA07" weight="duotone" />

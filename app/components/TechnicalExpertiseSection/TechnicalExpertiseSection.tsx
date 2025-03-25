@@ -19,7 +19,7 @@ export function TechnicalExpertiseSection() {
     },
     {
       title: "Blockchain & Web3",
-      items: ["Solidity", "Hardhat", "NFT development", "Tokenization"],
+      items: ["Solidity", "Hardhat", "NFT development", "tokenization"],
     },
     {
       title: "Back-end & Cloud",
@@ -48,7 +48,7 @@ export function TechnicalExpertiseSection() {
   return (
     <section
       id="technical-expertise"
-      className="bg-neutral-900 text-white font-sans px-[30px] py-[60px]"
+      className="bg-neutral-900 text-white font-sans px-[15px] md:px-[30px]"
     >
       <div className="flex">
         {/* Navbar lateral importada */}
@@ -67,16 +67,16 @@ export function TechnicalExpertiseSection() {
           <div className="space-y-8">
             {categories.map((category) => (
               <div key={category.title} className="border-b border-white pb-4">
-                <div className="flex items-start gap-[75px]">
+                <div className="flex flex-col md:flex-row items-start gap-[15px]">
                   {/* Frame fixo para o título */}
-                  <div className="w-[277px]">
+                  <div className="w-full md:w-[277px]">
                     <h3 className="text-white text-xl font-semibold">
                       {category.title}
                     </h3>
                   </div>
 
                   {/* Stacks (chips) */}
-                  <div className="flex flex-wrap gap-2 text-xs text-gray-300 max-w-[400px]">
+                  <div className="flex flex-wrap gap-2 text-xs text-gray-300 max-w-full md:max-w-[400px]">
                     {category.items.map((item) => (
                       <span
                         key={item}

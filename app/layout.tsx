@@ -9,8 +9,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Meu Portfolio",
-  description: "...",
+  title:
+    "Anderson Faé | Full-Stack Developer Specializing in JavaScript, Python, React.js, and Blockchain Technologies",
+  description:
+    "Full-Stack Developer with expertise in JavaScript, Python, and cloud architectures. Specializing in blockchain, Web3, and developing scalable, high-performance applications.",
 };
 
 export default function RootLayout({
